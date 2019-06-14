@@ -46,4 +46,12 @@ Now that everything is running perfectly in your local environment, let's try de
 
 1. Login via the CLI using `oc login -u YOURUSERID`.
 2. Create your demo workspace project `oc create project xml-apis`
-3. Via the CLI, cd to the `http-upload-service` directory and execute `mvn fabric8:deploy`.
+3. Via the CLI, cd to the `xml-api-failover` directory and execute `mvn clean fabric8:deploy`.
+4. To setup the Hystrix dashboard, execute the following via the CLI:
+
+```
+oc create -f http://repo1.maven.org/maven2/io/fabric8/kubeflix/hystrix-dashboard/1.0.28/hystrix-dashboard-1.0.28-openshift.yml
+oc expose service hystrix-dashboard --port=8080
+```
+5. Once the Hystrix dashboard has started, you can enter `http://country-holiday-lookup.xml-apis.svc:8080/hystrix.stream` as the turbine stream.  You should now be able to view the Camel circuits.
+6. Try testing using curl or SOAPUI, playing with valid and invalid requests.  Notice the circuit breaker behavior i.e. opening and closing, whenever there is a fault.

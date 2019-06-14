@@ -5,10 +5,10 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.mycompany</groupId>
-	<artifactId>camel-ose-springboot-xml</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
-	<name>Fabric8 :: Quickstarts :: Spring-Boot :: Camel XML</name>
-	<description>Spring Boot example running a Camel route defined in XML</description>
+	<artifactId>country-holiday-lookup</artifactId>
+	<version>1.0.0</version>
+	<name>Fuse XML API Country Holiday Lookup</name>
+	<description>Spring Boot example running a Camel route defined in JavaDSL</description>
 	<properties>
 		<spring-boot.version>1.5.4.RELEASE</spring-boot.version>
 		<fuse.version>7.3.0.fuse-730058-redhat-00001</fuse.version>

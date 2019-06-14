@@ -1,0 +1,6 @@
+spec:
+  to:
+    kind: Service
+    name: country-holiday-lookup
+  port:
+    targetPort: 9090
