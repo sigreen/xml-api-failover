@@ -21,7 +21,7 @@ Build & Run Locally
 2. Run locally via SpringBoot
 
 ```
-<project home>  $ mvn spring-boot:run -Dspring.cloud.kubernetes.enabled=false
+<project home>  $ mvn spring-boot:run
 ```
 3. Test sending a sample request
 
@@ -45,7 +45,7 @@ Build, Deploy and Run on OpenShift
 Now that everything is running perfectly in your local environment, let's try deploying our SpringBoot container to OpenShift using the s2i binary method.
 
 1. Login via the CLI using `oc login -u YOURUSERID`.
-2. Create your demo workspace project `oc create project xml-apis`
+2. Create your demo workspace project `oc new-project xml-apis`
 3. Via the CLI, cd to the `xml-api-failover` directory and execute `mvn clean fabric8:deploy`.
 4. To setup the Hystrix dashboard, execute the following via the CLI:
 
